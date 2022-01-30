@@ -82,7 +82,7 @@ def a(client, message):
         )
         print(str(e))
         return
-      m.edit("`Found Your Song 🎵,  Uploading To Telegram *1%/100*...`")
+      m.edit("`Found Your Song 🎵,  Uploading To Telegram 1%/100...`")
      m.edit("⚙️ Status: 📥 Downloading 📥 : 1%")
      m.edit("⚙️ Status: 📥 Downloading 📥 : 12%")
      m.edit("⚙️ Status: 📥 Downloading 📥 : 21%")
