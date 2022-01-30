@@ -9,9 +9,9 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ABS="Developer"
+Dvp="Developer"
 APPER="MASTER🔍"
-OWNER="mhdfajis"
+OWNER="Other Bots 🙂"
 GITCLONE="https://t.me/mhdfajisn"
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
@@ -20,7 +20,7 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
-@Client.on_message(filters.command('start') & filters.private)
+@Client.on_message(filters.command(['start'])) 
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(
@@ -28,8 +28,8 @@ async def start(client, message):
                 [
                     InlineKeyboardButton(BUTTON1, url=GITCLONE)
                  ],[
-                    InlineKeyboardButton(OWNER,url=f"https://telegram.dog/{Config.OWNER}"),
-                    InlineKeyboardButton(ABS, url=B2)
+                    InlineKeyboardButton(OWNER,url=f"https://t.me/fnm_bots"),
+                    InlineKeyboardButton(Dvp, url=B2)
             ]
           ]
         ),
@@ -67,7 +67,7 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[@mhdfajis/🇮🇳]" 
+            performer = f"@mhdfajis/🇮🇳" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
@@ -120,12 +120,50 @@ def a(client, message):
     m.edit("⚙️ Status: 📥 Downloading 📥 : 99.98%")
     m.edit("⚙️ Status: 📥 Downloading 📥 : 99.99")
     m.edit("⚙️ Status: 📥 Downloading 📥 : 100")
+    m.edit("⚙️ Status: Uploading : 1%")
+    m.edit("⚙️ Status: Uploading : 3%")
+    m.edit("⚙️ Status: Uploading : 6%")
+    m.edit("⚙️ Status: Uploading : 9%")
+    m.edit("⚙️ Status: Uploading : 12%")
+    m.edit("⚙️ Status: Uploading : 15%")
+    m.edit("⚙️ Status: Uploading : 18%")
+    m.edit("⚙️ Status: Uploading : 21%")
+    m.edit("⚙️ Status: Uploading : 24%")
+    m.edit("⚙️ Status: Uploading : 27%")
+    m.edit("⚙️ Status: Uploading : 30%")
+    m.edit("⚙️ Status: Uploading : 33%")
+    m.edit("⚙️ Status: Uploading : 36%")
+    m.edit("⚙️ Status: Uploading : 39%")
+    m.edit("⚙️ Status: Uploading: 42%")
+    m.edit("⚙️ Status: Uploading : 45%")
+    m.edit("⚙️ Status: Uploading : 48%")
+    m.edit("⚙️ Status: Uploading : 51%")
+    m.edit("⚙️ Status: Uploading: 54%")
+    m.edit("⚙️ Status: Uploading : 57%")
+    m.edit("⚙️ Status: Uploading : 60%")
+    m.edit("⚙️ Status: Uploading : 63%")
+    m.edit("⚙️ Status: Uploading : 66%")
+    m.edit("⚙️ Status: Uploading : 69%")
+    m.edit("⚙️ Status: Uploading : 72%")
+    m.edit("⚙️ Status: Uploading : 75%")
+    m.edit("⚙️ Status: Uploading : 78%")
+    m.edit("⚙️ Status: Uploading : 81%")
+    m.edit("⚙️ Status: Uploading : 84%")
+    m.edit("⚙️ Status: Uploading : 87%")
+    m.edit("⚙️ Status: Uploading : 90%")
+    m.edit("⚙️ Status: Uploading : 93%")
+    m.edit("⚙️ Status: Uploading : 96%")
+    m.edit("⚙️ Status: Uploading : 99%")
+    m.edit("⚙️ Status: Uploading : 99.98%")
+    m.edit("⚙️ Status: Uploading : 99.99")
+    m.edit("⚙️ Status: Uploading : 100")
+    
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Uploaded By:</b> <a href="https://t.me/Fajis_SongBot">Fajis Song Bot</a>'
+        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Uploaded By:</b> <a href="https://t.me/Fajis_SongBot">Fajis Song Bot</a>\nviews: {views}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
