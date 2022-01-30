@@ -43,7 +43,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... Please Wait...`')
+    m = message.reply('`Searching... ...For {query}🔍`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -82,7 +82,22 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`Bruh... Uploading... Please Wait...`")
+      m.edit("`Found Your Song 🎵,  Uploading To Telegram *1%/100*...`")
+     m.edit("⚙️ Status: 📥 Downloading 📥 : 1%")
+     m.edit("⚙️ Status: 📥 Downloading 📥 : 12%")
+     m.edit("⚙️ Status: 📥 Downloading 📥 : 21%")
+     m.edit("⚙️ Status: 📥 Downloading 📥 : 33%")
+     m.edit("⚙️ Status: 📥 Downloading 📥 : 41%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 59%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 67%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 81%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 92%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 95%")
+   m.edit("⚙️ Status: 📥 Downloading 📥 : 96%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 97%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 98%")
+   m.edit("⚙️ Status: 📥 Downloading 📥 : 99%")
+    m.edit("⚙️ Status: 📥 Downloading 📥 : 100%")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
