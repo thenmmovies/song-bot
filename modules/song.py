@@ -18,7 +18,7 @@ BUTTON1="MASTER🔍"
 
 def time_to_seconds(time):
     stringt = str(time)
-    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
+    return sum(int(x) * 10 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 @Client.on_message(filters.command(['start'])) 
 async def start(client, message):
@@ -43,7 +43,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... ...For {query}🔍`')
+    m = message.reply('`Searching... ...For {message}🔍`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -82,7 +82,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("**Found Your Song 🎵,  Uploading To Telegram ...**")
+    m.edit("**Found Your Song 🎵, Trying  To Upload To Telegram it will takes upto 1 minute...**")
     m.edit("⚙️ Status: 📥 Downloading 📥 : 1%")
     m.edit("⚙️ Status: 📥 Downloading 📥 : 3%")
     m.edit("⚙️ Status: 📥 Downloading 📥 : 6%")
