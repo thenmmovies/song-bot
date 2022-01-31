@@ -75,7 +75,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing found Retry with another !**.format(message.from_user.mention)')
+            m.edit('**👎 Nothing found Retry with another !**').format(message.from_user.mention)
             return
     except Exception as e:
         m.edit(
