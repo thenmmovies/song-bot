@@ -37,7 +37,6 @@ async def start(client, message):
          reply_markup=InlineKeyboardMarkup(button),
         reply_to_message_id=message.message_id
     )
-Pl
 
 @Client.on_message(filters.command(['song']))
 def a(client, message):
