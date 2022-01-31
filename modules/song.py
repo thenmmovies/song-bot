@@ -16,7 +16,9 @@ GITCLONE="https://t.me/mhdfajisn"
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
 
-def time_to_seconds(time): stringt = str(time) return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
+def time_to_seconds(time):
+  stringt = str(time) 
+  return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
 @Client.on_message(filters.command(['start'])) 
