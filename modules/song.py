@@ -16,7 +16,17 @@ GIT="https://t.me/mhdfajisn"
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
 Men = "Use /song |song name|"
-button = [[ InlineKeyboardButton('Developer ⚡', url=GIT), InlineKeyboardButton('Group, url='https://t.me/codingdiscuss') ],[ InlineKeyboardButton('Close 🔐', callback_data='close') ]] 
+buttons = [[ InlineKeyboardButton('Developer ⚡', url=GIT), InlineKeyboardButton('Group, url='https://t.me/codingdiscuss') ],[ InlineKeyboardButton('Close 🔐', callback_data='close') ]]
+
+button = buttons = [[
+        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+    ],[
+        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+    ],[
+        InlineKeyboardButton('Help ⚙', callback_data="help")
+    ]]
+
 def time_to_seconds(time):
     stringt = str(time) 
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
