@@ -23,7 +23,7 @@ button =  [[
     ],[
         InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
     ],[
-        InlineKeyboardButton('Close  🔐, callback_data="close")
+        InlineKeyboardButton('Close  🔐', callback_data="close")
     ]]
 
 def time_to_seconds(time):
