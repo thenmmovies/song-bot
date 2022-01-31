@@ -33,7 +33,7 @@ def time_to_seconds(time):
 
 @Client.on_message(filters.command(['start'])) 
 async def start(client, message):
-    mp = message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
+    message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(button),
         reply_to_message_id=message.message_id
     )
@@ -109,7 +109,7 @@ def a(client, message):
 Client.on_message(filters.command(['close']))
 def a(client, message):
     query = 'close'
-mp.delete()
+message.delete()
 
 
 
