@@ -9,7 +9,7 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-Dvp="Developer"
+DVP="Developer"
 APPER="MASTER🔍"
 OWNER="Other Bots 🙂"
 GIT="https://t.me/mhdfajisn"
@@ -35,10 +35,18 @@ def time_to_seconds(time):
 @Client.on_message(filters.command(['start'])) 
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
-         reply_markup=InlineKeyboardMarkup(button),
+         reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(BUTTON1, url=GIT)
+                 ],[
+                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
+                    InlineKeyboardButton(DVP, url=B2)
+            ]
+          ]
+        ),
         reply_to_message_id=message.message_id
     )
-
 
 @Client.on_message(filters.command(['song']))
 def a(client, message):
