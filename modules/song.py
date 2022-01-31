@@ -16,7 +16,6 @@ GIT="https://t.me/mhdfajisn"
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
 Men = "Use /song |song name|"
-buttons = [[ InlineKeyboardButton('Developer ⚡', url=GIT), InlineKeyboardButton('Group, url='https://t.me/codingdiscuss') ],[ InlineKeyboardButton('Close 🔐', callback_data='close') ]]
 
 button =  [[
         InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
@@ -24,7 +23,7 @@ button =  [[
     ],[
         InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
     ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
+        InlineKeyboardButton('Close  🔐, callback_data="close")
     ]]
 
 def time_to_seconds(time):
