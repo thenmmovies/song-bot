@@ -107,3 +107,8 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+
+if query_data == "close":
+m.delete()
+
+
