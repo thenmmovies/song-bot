@@ -16,6 +16,8 @@ GITCLONE="https://t.me/mhdfajisn"
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
 
+def time_to_seconds(time): stringt = str(time) return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
+
 
 @Client.on_message(filters.command(['start'])) 
 async def start(client, message):
@@ -47,6 +49,7 @@ def a(client, message):
         count = 0
         while len(results) == 0 and count < 6:
             if count>0:
+             time.sleep(1)
             results = YoutubeSearch(query, max_results=1).to_dict()
             count += 1
         # results = YoutubeSearch(query, max_results=1).to_dict()
