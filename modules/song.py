@@ -21,7 +21,7 @@ Men = "Use /song |song name|"
 
 button =  [[
         InlineKeyboardButton('Developers', url='https://t.me/botcodesforyou'),
-        InlineKeyboardButton('Master,url=GIT)
+        InlineKeyboardButton('Master',url=GIT)
     ],[
         InlineKeyboardButton('Support 🛠', url='https://t.me/codingdiscuss)
     ],[
