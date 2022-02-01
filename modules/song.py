@@ -23,7 +23,7 @@ button =  [[
         InlineKeyboardButton('Developers', url='https://t.me/botcodesforyou'),
         InlineKeyboardButton('Master',url=GIT)
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/codingdiscuss)
+        InlineKeyboardButton('Support 🛠', url='https://t.me/codingdiscuss')
     ],[
         InlineKeyboardButton('Close  🔐', callback_data="close")
     ]]
