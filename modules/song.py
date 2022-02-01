@@ -38,6 +38,13 @@ async def start(client, message):
         reply_to_message_id=message.message_id
     )
 
+ @Bot.on_callback_query()
+async def cb_handler(bot, update): 
+  if update.data == "close":
+  await update.message.delete()
+
+
+
 
 @Client.on_message(filters.command(['song']))
 def a(client, message):
@@ -106,12 +113,5 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
- @Bot.on_callback_query()
-async def cb_handler(bot, update): 
-  if update.data == "close":
-  await update.message.delete()
-
-
-
 
 
