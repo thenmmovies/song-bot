@@ -33,10 +33,13 @@ def time_to_seconds(time):
 
 @Client.on_message(filters.command(['start'])) 
 async def start(client, message):
-    message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
+    await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(button),
         reply_to_message_id=message.message_id
     )
+Client.on_message(filters.command(['close']))
+def a(client, message):
+await message.delete()
 
 @Client.on_message(filters.command(['song']))
 def a(client, message):
@@ -106,10 +109,7 @@ def a(client, message):
     except Exception as e:
         print(e)
 
-Client.on_message(filters.command(['close']))
-def a(client, message):
-    query = 'close'
-message.delete()
+
 
 
 
