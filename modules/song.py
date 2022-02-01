@@ -37,9 +37,7 @@ async def start(client, message):
          reply_markup=InlineKeyboardMarkup(button),
         reply_to_message_id=message.message_id
     )
-Client.on_message(filters.command(['close']))
-def a(client, message):
-await message.delete()
+
 
 @Client.on_message(filters.command(['song']))
 def a(client, message):
