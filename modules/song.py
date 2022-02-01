@@ -18,10 +18,10 @@ BUTTON1="MASTER🔍"
 Men = "Use /song |song name|"
 
 button =  [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+        InlineKeyboardButton('Developers', url='https://t.me/botcodesforyou),
+        InlineKeyboardButton('Master,url=GIT)
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+        InlineKeyboardButton('Support 🛠', url='https://t.me/codingdiscuss)
     ],[
         InlineKeyboardButton('Close  🔐', callback_data="close")
     ]]
