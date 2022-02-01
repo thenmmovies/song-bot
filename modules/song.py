@@ -4,7 +4,6 @@ import requests
 
 import os
 import time
-from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 DVP="Developer"
@@ -12,6 +11,11 @@ APPER="MASTER🔍"
 OWNER="Other Bots 🙂"
 GIT="https://t.me/mhdfajisn"
 
+Bot = Client( "Song Downloader Bot", 
+bot_token = os.environ["BOT_TOKEN"], 
+api_id = int(os.environ["API_ID"]),
+ api_hash = os.environ["API_HASH"]
+)
 
 B2="telegram.dog/mhdfajis"
 BUTTON1="MASTER🔍"
@@ -31,14 +35,14 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-@Client.on_message(filters.command(['start'])) 
+@Bot.on_message(filters.command(['start'])) 
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(button),
         reply_to_message_id=message.message_id
     )
 
- @Client.on_callback_query()
+ @Bot.on_callback_query()
 async def cb_handler(bot, update): 
   if update.data == "close":
   await update.message.delete()
@@ -46,7 +50,7 @@ async def cb_handler(bot, update):
 
 
 
-@Client.on_message(filters.command(['song']))
+@Bot.on_message(filters.command(['song']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
